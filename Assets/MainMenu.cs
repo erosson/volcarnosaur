@@ -6,6 +6,7 @@ public class MainMenu : MonoBehaviour {
 		GUILayout.BeginArea(new Rect(0, 0, Screen.width, Screen.height));
 		// TODO pick a real name
 		GUILayout.Label("LD48");
+		GUILayout.Label("The volcano demands blood! Throw other dinosaurs into its fiery maw to delay the eruption, but don't let others throw you in!");
 		if (GUILayout.Button ("Play")) {
 			Play();
         }
