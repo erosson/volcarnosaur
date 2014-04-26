@@ -1,0 +1,22 @@
+- art
+	- title screen logo
+	- background
+		- volcano
+		- ground
+	- platforms/ground
+	- main character dino
+		* death
+		* walking
+		* throwing
+		* pickup
+	- throwable dinos
+		* picked up
+		* walking/running
+		* thrown
+		* death
+			- volcano choking/descending
+	- volcano progress
+		- red bar in the middle of the volcano
+		- smoke as eruption approaches
+		- red underground when eruption is seconds away
+		- game over explosion
