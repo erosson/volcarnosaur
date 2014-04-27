@@ -21,10 +21,12 @@ public class Unpause : MonoBehaviour {
 	}
 
 	void OnHeroDeath() {
+		gameOverParams.cause = GameOverParams.Cause.FellInLava;
 		GameOver();
 	}
 	
 	void OnTimerExpired() {
+		gameOverParams.cause = GameOverParams.Cause.TimeOver;
 		GameOver();
 	}
 	
@@ -33,6 +35,7 @@ public class Unpause : MonoBehaviour {
 	}
 	
 	private void GameOver() {
+		DebugUtil.AssertNotNull(gameOverParams.cause);
 		gameOverParams.elapsedSeconds = timer.elapsedSeconds;
 		gameOverParams.enemiesKilled = enemyKillCount;
 		gameOverParams.transform.parent = null;

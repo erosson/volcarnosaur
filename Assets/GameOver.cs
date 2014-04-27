@@ -1,9 +1,16 @@
 ﻿using UnityEngine;
+using System.Collections.Generic;
 using System.Collections;
 
 public class GameOver : MonoBehaviour {
+	private static readonly Dictionary<GameOverParams.Cause, string> causeTexts = new Dictionary<GameOverParams.Cause, string> {
+		{GameOverParams.Cause.FellInLava, "You fell into the volcano."},
+		{GameOverParams.Cause.TimeOver, "You ran out of time and the volcano erupted."},
+	};
+
 	public Texture2D logo;
 	private GameOverParams args;
+	private string causeText;
 
 	// Use this for initialization
 	void Start () {
@@ -15,6 +22,7 @@ public class GameOver : MonoBehaviour {
 		args = obj.GetComponent<GameOverParams>();
 		DebugUtil.Assert(args != null);
 		Destroy(obj);
+		causeText = causeTexts[args.cause];
 	}
 
 	void OnGUI() {
@@ -22,7 +30,7 @@ public class GameOver : MonoBehaviour {
 		GUI.backgroundColor = Color.clear;
 		GUILayout.Box(logo);
 		GUI.backgroundColor = Color.white;
-		GUILayout.Box(string.Format ("Survived {0} seconds\nKilled {1} enemies", args.elapsedSeconds, args.enemiesKilled));
+		GUILayout.Box(string.Format ("{0}\nSurvived {1} seconds\nKilled {2} enemies", causeText, args.elapsedSeconds, args.enemiesKilled));
 		if (GUILayout.Button ("Return to Main Menu")) {
 			Application.LoadLevel("MainMenu");
 		}

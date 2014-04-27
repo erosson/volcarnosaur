@@ -13,7 +13,7 @@ public class Hero : MonoBehaviour {
 	
 	void Start () {
 		gameUI = GameObject.Find("/GameUI");
-		anim = GetComponent<Animator>();
+		anim = DebugUtil.AssertNotNull(GetComponent<Animator>());
 	}
 
 	void FixedUpdate() {
