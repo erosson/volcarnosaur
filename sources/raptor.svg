@@ -29,7 +29,7 @@
      inkscape:pageshadow="2"
      inkscape:zoom="0.98994949"
      inkscape:cx="93.160472"
-     inkscape:cy="753.42324"
+     inkscape:cy="713.01714"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -57,7 +57,9 @@
     <g
        id="g3063"
        transform="matrix(0.27952093,0,0,0.27952093,337.59318,285.25414)"
-       style="stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none">
+       style="stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90">
       <path
          style="fill:#916f6f;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
          d="m 120.71429,408.07647 -27.857147,28.57143 44.999997,35.71428 -30.71428,44.28572 80,15.71428 -57.85715,-20.71428 40.71429,-40 z"
@@ -77,7 +79,10 @@
     <g
        id="g3025"
        transform="matrix(0.27952093,0,0,0.27952093,327.92447,287.98084)"
-       style="stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none">
+       style="stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none"
+       inkscape:export-filename="C:\Users\Evan\Documents\GitHub\LD48\sources\g3063.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90">
       <path
          sodipodi:nodetypes="cccc"
          inkscape:connector-curvature="0"
@@ -103,27 +108,42 @@
        style="fill:#916f6f;stroke:#000000;stroke-width:0.27952093;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        d="m 352.68889,397.22805 -77.19026,27.55816 75.48035,-15.48506 z"
        id="path3003"
-       inkscape:connector-curvature="0" />
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="C:\Users\Evan\Documents\GitHub\LD48\sources\g3063.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
     <path
        style="fill:#916f6f;stroke:#000000;stroke-width:0.27952093;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        d="m 387.55536,381.54534 -38.08791,17.10966 0.39931,10.78153 37.06368,-4.96135 5.41255,-11.97532 z"
        id="path3005"
        inkscape:connector-curvature="0"
-       sodipodi:nodetypes="ccccc" />
+       sodipodi:nodetypes="ccccc"
+       inkscape:export-filename="C:\Users\Evan\Documents\GitHub\LD48\sources\g3063.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.27952093;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        d="m 392.37078,392.3487 c 0.0471,-0.18823 0.0941,-0.37647 0,0 z"
        id="path3011"
-       inkscape:connector-curvature="0" />
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="C:\Users\Evan\Documents\GitHub\LD48\sources\g3063.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
     <path
        style="fill:#916f6f;stroke:#000000;stroke-width:0.27952093;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        d="m 391.83885,366.0152 6.49425,3.38831 -5.92953,23.43578 -4.94128,-11.57671 z"
        id="path3013"
-       inkscape:connector-curvature="0" />
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="C:\Users\Evan\Documents\GitHub\LD48\sources\g3063.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
     <g
        id="g3071"
        transform="matrix(0.20710611,0.18772055,-0.18772055,0.20710611,415.82223,275.06386)"
-       style="stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none">
+       style="stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none"
+       inkscape:export-filename="C:\Users\Evan\Documents\GitHub\LD48\sources\g3063.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90">
       <path
          inkscape:connector-curvature="0"
          id="path3019"
@@ -138,7 +158,10 @@
     <g
        id="g3056"
        transform="matrix(0.27655724,0.04059607,-0.04059607,0.27655724,343.0706,282.64626)"
-       style="stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none">
+       style="stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none"
+       inkscape:export-filename="C:\Users\Evan\Documents\GitHub\LD48\sources\g3063.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90">
       <path
          inkscape:connector-curvature="0"
          id="path3030"

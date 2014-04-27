@@ -19,6 +19,12 @@ public class MainMenu : MonoBehaviour {
         GUILayout.EndArea();
 	}
 
+	void Update() {
+		if (Input.GetKeyDown(KeyCode.Escape)) {
+			Application.Quit();
+		}
+	}
+
 	private void Play() {
 		Application.LoadLevel("Game");
 	}
