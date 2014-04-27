@@ -2,32 +2,54 @@
 using System.Collections;
 
 public class Spawn : MonoBehaviour {
-	public GameObject enemyTemplate;
-	public Transform enemyParent;
+	private GameObject enemyTemplate;
+	private Transform enemyParent;
 	public float spawnDelaySeconds = 1;
+	public float spawnDelayVariance = 0.1f;
+	public float maxEnemies = 10;
 	private int spawned = 0;
+	private bool heroTooClose = false;
+
+	public int numEnemies {
+		get {
+			return enemyParent.childCount;
+		}
+	}
 
 	void Start() {
+		// all this parenting is kind of hacky, but I'm experientming with Find instead of direct references...
+		enemyParent = transform.parent.parent.Find("Enemies").transform;
+		enemyTemplate = transform.parent.parent.Find("EnemyTemplate").gameObject;
 		StartCoroutine(SpawnForever()) ;
 	}
 
 	private IEnumerator SpawnForever() {
+		yield return new WaitForSeconds(Random.Range (0, spawnDelaySeconds));
 		while(true) {
-			SpawnOne();
-			yield return new WaitForSeconds(spawnDelaySeconds);
+			if (numEnemies < maxEnemies && !heroTooClose) {
+				SpawnOne();
+			}
+			yield return new WaitForSeconds(spawnDelaySeconds + Random.Range (-spawnDelayVariance, spawnDelayVariance));
 		}
 	}
 
 	private void SpawnOne() {
-		var enemy = Instantiate(enemyTemplate, transform.position, Quaternion.identity) as GameObject;
+		var enemy = Instantiate(enemyTemplate, transform.position, transform.rotation) as GameObject;
 		enemy.transform.parent = enemyParent;
 		spawned++;
-		enemy.name = "Enemy" + spawned;
+		enemy.name = string.Format("Enemy{0}{1}", name, spawned);
 		enemy.SetActive(true);
-		// send them flying far to the left or the right
-		var direction = (Mathf.Round(Random.Range(0, 2)) * 2 - 1);
-		DebugUtil.Assert (direction == 1 || direction == -1);
-		var magnitude = Random.Range(1000, 10000);
-		enemy.rigidbody2D.AddForce(new Vector2(magnitude * direction, 0));
+	}
+	
+	void OnTriggerEnter2D(Collider2D coll) {
+		if (coll.name == "Hero") {
+			heroTooClose = true;
+		}
+	}
+	
+	void OnTriggerExit2D(Collider2D coll) {
+		if (coll.name == "Hero") {
+			heroTooClose = false;
+		}
 	}
 }
