@@ -1,6 +1,6 @@
 #!/bin/sh -eux
 cd build
-name=LD48
+name=volcarnosaur
 mv -f $name www/ || true
 
 cp -rp ../www/* .

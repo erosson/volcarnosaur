@@ -4,7 +4,7 @@ REM if %errorlevel% neq 0 exit /b %errorlevel%
 
 set UNITY_EXE="C:\Program Files (x86)\Unity\Editor\Unity.exe"
 set UNITY_BAT=%UNITY_EXE% -quit -batchmode
-set NAME=LD48
+set NAME=volcarnosaur
 mkdir build
 mkdir build\win
 mkdir build\win\%NAME%
