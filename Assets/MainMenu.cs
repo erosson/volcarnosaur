@@ -3,8 +3,9 @@ using System.Collections;
 
 public class MainMenu : MonoBehaviour {
 	void OnGUI() {
-		GUILayout.BeginArea(new Rect(0, 200, Screen.width, Screen.height));
-		GUILayout.Label("The volcano demands blood! Throw other dinosaurs into its fiery maw to delay the eruption, but don't let others throw you in!");
+		GUILayout.BeginArea(new Rect(0, 100, Screen.width, Screen.height-100));
+		GUILayout.Box("The volcano demands blood! Push other dinosaurs into its fiery maw to delay the eruption.\n\n" + 
+		              "Arrow keys move.");
 		if (GUILayout.Button ("Play")) {
 			Play();
         }
