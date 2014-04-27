@@ -15,7 +15,7 @@ public class Hero : MonoBehaviour {
 		gameUI = GameObject.Find("/GameUI");
 	}
 
-	void Update() {
+	void FixedUpdate() {
 		var movement = Input.GetAxis("Horizontal");
 		var force = movement * moveForce;
 		anim.SetFloat("Acceleration", force);

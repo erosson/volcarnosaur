@@ -170,6 +170,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee6cac69077a1f843a52fe89c66194ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveForce: 2
+  moveVMax: 2
 --- !u!61 &34328075
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -249,6 +251,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee6cac69077a1f843a52fe89c66194ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveForce: 2
+  moveVMax: 2
 --- !u!61 &131430576
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -419,15 +423,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee6cac69077a1f843a52fe89c66194ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveForce: 20
+  moveVMax: 10
 --- !u!50 &140144846
 Rigidbody2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 140144842}
-  m_Mass: 1
+  m_Mass: .600000024
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: .800000012
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -764,7 +770,7 @@ PolygonCollider2D:
       - {x: 27.3750019, y: -13.2597666}
       - {x: 27.3750019, y: -12.9389658}
       - {x: 27.1076679, y: -12.4577646}
-      - {x: 26.4660664, y: -11.2814951}
+      - {x: 26.7760658, y: -10.847496}
       - {x: 24.8085957, y: -8.28735447}
       - {x: 24.2204609, y: -7.21801805}
       - {x: 23.5788593, y: -6.04174852}
@@ -820,8 +826,8 @@ PolygonCollider2D:
       - {x: -22.5095234, y: -4.06347704}
       - {x: -23.5788593, y: -5.98828173}
       - {x: -24.4877949, y: -7.64575243}
-      - {x: -25.9848652, y: -10.3725595}
-      - {x: -26.4125996, y: -11.1745615}
+      - {x: -26.0928421, y: -10.2645845}
+      - {x: -27.0064659, y: -10.8866272}
       - {x: -26.9472675, y: -12.1369638}
       - {x: -27.3750019, y: -12.9924326}
       - {x: -27.3750019, y: -13.2597666}
@@ -1397,6 +1403,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee6cac69077a1f843a52fe89c66194ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveForce: 2
+  moveVMax: 2
 --- !u!61 &808503974
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2509,6 +2517,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee6cac69077a1f843a52fe89c66194ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveForce: 2
+  moveVMax: 2
 --- !u!61 &1556610195
 BoxCollider2D:
   m_ObjectHideFlags: 0
