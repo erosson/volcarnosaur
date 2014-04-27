@@ -2,4 +2,13 @@
 using System.Collections;
 
 public class DebugUtil {
+	public static void Assert(bool val, string message) {
+		if (!val) {
+			throw new System.Exception(message);
+		}
+	}
+
+	public static void Assert(bool val) {
+		Assert(val, "Assertion failed");
+	}
 }

@@ -9,7 +9,13 @@ public class Hero : MonoBehaviour {
 	public Transform groundCheck;
 	public Animator anim;
 
-	void Update () {
+	private GameObject gameUI;
+	
+	void Start () {
+		gameUI = GameObject.Find("/GameUI");
+	}
+
+	void Update() {
 		var movement = Input.GetAxis("Horizontal");
 		var force = movement * moveForce;
 		anim.SetFloat("Acceleration", force);
@@ -27,5 +33,9 @@ public class Hero : MonoBehaviour {
 			//	Debug.Log ("grounded-check prevents jump");
 			//}
         }
+	}
+
+	void OnTouchLava() {
+		gameUI.BroadcastMessage("OnHeroDeath");
 	}
 }

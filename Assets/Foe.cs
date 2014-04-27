@@ -1,11 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+// even in unity, F O E
 public class Foe : MonoBehaviour {
-	void OnCollisionEnter2D(Collision2D coll) {
-		if (coll.transform.tag == "lava") {
-			Destroy(gameObject);
-			Debug.Log("eeeeeek");
-		}
+	private GameObject gameUI;
+	void Start () {
+		gameUI = GameObject.Find("/GameUI");
 	}
+	
+	void OnTouchLava() {
+		Destroy(gameObject);
+		gameUI.BroadcastMessage("OnEnemyDestroyed", this);
+    }
 }
