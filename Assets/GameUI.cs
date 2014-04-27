@@ -2,6 +2,16 @@
 using System.Collections;
 
 public class GameUI : MonoBehaviour {
+	private GameOverParams gameOverParams;
+	private Timer timer;
+
+	void Start() {
+		gameOverParams = GetComponentInChildren<GameOverParams>();
+		DebugUtil.Assert (gameOverParams != null);
+		timer = GetComponentInChildren<Timer>();
+		DebugUtil.Assert (timer != null);
+	}
+
 	void Update() {
 		if (Input.GetKeyDown(KeyCode.Escape)) {
 			// TODO confirm quit; pause
@@ -18,7 +28,9 @@ public class GameUI : MonoBehaviour {
 	}
 	
 	private void GameOver() {
-		// TODO game over screen
-		Application.LoadLevel("MainMenu");
+		gameOverParams.elapsedSeconds = timer.elapsedSeconds;
+		gameOverParams.transform.parent = null;
+		DontDestroyOnLoad(gameOverParams);
+		Application.LoadLevel("GameOver");
 	}
 }

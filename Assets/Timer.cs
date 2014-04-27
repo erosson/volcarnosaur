@@ -3,6 +3,7 @@ using System.Collections;
 
 public class Timer : MonoBehaviour {
 	public int timerSeconds = 60;
+	public long elapsedSeconds = 0;
 
 	private GameObject gameUI;
 
@@ -15,6 +16,7 @@ public class Timer : MonoBehaviour {
 		while (timerSeconds > 0) {
 			yield return new WaitForSeconds(1);
 			timerSeconds -= 1;
+			elapsedSeconds += 1;
 		}
 		gameUI.BroadcastMessage("OnTimerExpired");
 	}
