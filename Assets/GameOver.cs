@@ -2,6 +2,7 @@
 using System.Collections;
 
 public class GameOver : MonoBehaviour {
+	public Texture2D logo;
 	private GameOverParams args;
 
 	// Use this for initialization
@@ -17,7 +18,10 @@ public class GameOver : MonoBehaviour {
 	}
 
 	void OnGUI() {
-		GUILayout.BeginArea(new Rect(0, 100, Screen.width, Screen.height-100));
+		GUILayout.BeginArea(new Rect(0, 0, Screen.width, Screen.height));
+		GUI.backgroundColor = Color.clear;
+		GUILayout.Box(logo);
+		GUI.backgroundColor = Color.white;
 		GUILayout.Box(string.Format ("Survived {0} seconds\nKilled {1} enemies", args.elapsedSeconds, args.enemiesKilled));
 		if (GUILayout.Button ("Return to Main Menu")) {
 			Application.LoadLevel("MainMenu");

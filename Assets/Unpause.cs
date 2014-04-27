@@ -1,22 +1,22 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class GameUI : MonoBehaviour {
+public class Unpause : MonoBehaviour {
 	private GameOverParams gameOverParams;
-	private long enemyKillCount = 0;
 	private Timer timer;
+	private Pause pause;
+	private long enemyKillCount = 0;
 
-	void Start() {
-		gameOverParams = GetComponentInChildren<GameOverParams>();
-		DebugUtil.Assert (gameOverParams != null);
-		timer = GetComponentInChildren<Timer>();
-		DebugUtil.Assert (timer != null);
+	void Start () {
+		gameOverParams = DebugUtil.AssertNotNull(GetComponentInChildren<GameOverParams>());
+		timer = DebugUtil.AssertNotNull(GetComponentInChildren<Timer>());
+		// pause starts out inactive!
+		pause = transform.parent.GetComponentsInChildren<Pause>(true)[0];
 	}
-
+	
 	void Update() {
 		if (Input.GetKeyDown(KeyCode.Escape)) {
-			// TODO confirm quit; pause
-			Application.LoadLevel("MainMenu");
+			pause.gameObject.SetActive(true);
 		}
 	}
 
@@ -27,7 +27,7 @@ public class GameUI : MonoBehaviour {
 	void OnTimerExpired() {
 		GameOver();
 	}
-
+	
 	void OnEnemyKilled() {
 		enemyKillCount++;
 	}

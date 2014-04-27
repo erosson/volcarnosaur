@@ -2,8 +2,13 @@
 using System.Collections;
 
 public class MainMenu : MonoBehaviour {
+	public Texture2D logo;
+
 	void OnGUI() {
-		GUILayout.BeginArea(new Rect(0, 100, Screen.width, Screen.height-100));
+		GUILayout.BeginArea(new Rect(0, 0, Screen.width, Screen.height));
+		GUI.backgroundColor = Color.clear;
+		GUILayout.Box(logo);
+		GUI.backgroundColor = Color.white;
 		GUILayout.Box("The volcano demands blood! Push other dinosaurs into its fiery maw to delay the eruption.\n\n" + 
 		              "Arrow keys move.");
 		if (GUILayout.Button ("Play")) {
