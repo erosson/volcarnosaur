@@ -3,6 +3,7 @@ using System.Collections;
 
 public class GameUI : MonoBehaviour {
 	private GameOverParams gameOverParams;
+	private long enemyKillCount = 0;
 	private Timer timer;
 
 	void Start() {
@@ -26,9 +27,14 @@ public class GameUI : MonoBehaviour {
 	void OnTimerExpired() {
 		GameOver();
 	}
+
+	void OnEnemyKilled() {
+		enemyKillCount++;
+	}
 	
 	private void GameOver() {
 		gameOverParams.elapsedSeconds = timer.elapsedSeconds;
+		gameOverParams.enemiesKilled = enemyKillCount;
 		gameOverParams.transform.parent = null;
 		DontDestroyOnLoad(gameOverParams);
 		Application.LoadLevel("GameOver");

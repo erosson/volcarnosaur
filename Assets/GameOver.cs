@@ -18,7 +18,7 @@ public class GameOver : MonoBehaviour {
 
 	void OnGUI() {
 		GUILayout.BeginArea(new Rect(0, 100, Screen.width, Screen.height-100));
-		GUILayout.Box(string.Format ("Survived {0} seconds", args.elapsedSeconds));
+		GUILayout.Box(string.Format ("Survived {0} seconds\nKilled {1} enemies", args.elapsedSeconds, args.enemiesKilled));
 		if (GUILayout.Button ("Return to Main Menu")) {
 			Application.LoadLevel("MainMenu");
 		}

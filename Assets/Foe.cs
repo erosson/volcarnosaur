@@ -10,6 +10,6 @@ public class Foe : MonoBehaviour {
 	
 	void OnTouchLava() {
 		Destroy(gameObject);
-		gameUI.BroadcastMessage("OnEnemyDestroyed", this);
+		gameUI.BroadcastMessage("OnEnemyKilled", this);
     }
 }

@@ -25,7 +25,7 @@ public class Timer : MonoBehaviour {
 		GUI.Label (new Rect(0, 0, Screen.width, 100), string.Format("{0} seconds left", timerSeconds));
 	}
 
-	public void OnEnemyDestroyed() {
+	public void OnEnemyKilled() {
 		timerSeconds += 10;
 	}
 }
