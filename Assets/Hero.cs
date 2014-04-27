@@ -14,14 +14,15 @@ public class Hero : MonoBehaviour {
 		rigidbody2D.velocity = new Vector2(Mathf.Clamp(rigidbody2D.velocity.x, -moveVMax, moveVMax), rigidbody2D.velocity.y);
 
 		var jump = Input.GetAxis("Vertical");
-		if (rigidbody2D.velocity.y == 0 && jump > 0) {
-			var cast = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("ground"));
-			if (cast.collider) {
+		// TODO grounded detection; no flying
+		if (jump > 0) {
+			//var cast = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("ground"));
+			//if (cast.collider) {
 				rigidbody2D.AddForce(Vector2.up * jumpForce);
-            }
-			else {
-				Debug.Log ("grounded-check prevents jump");
-			}
+            //}
+			//else {
+			//	Debug.Log ("grounded-check prevents jump");
+			//}
         }
 	}
 }
