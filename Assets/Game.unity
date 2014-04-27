@@ -383,6 +383,7 @@ GameObject:
   - 61: {fileID: 140144844}
   - 61: {fileID: 140144843}
   - 114: {fileID: 140144845}
+  - 95: {fileID: 140144848}
   m_Layer: 0
   m_Name: EnemyTemplate
   m_TagString: enemy
@@ -452,6 +453,20 @@ Transform:
   m_Children:
   - {fileID: 1180334870}
   m_Father: {fileID: 1917251297}
+--- !u!95 &140144848
+Animator:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 140144842}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bc7939f7177f258499c707d19fb93eff, type: 2}
+  m_CullingMode: 1
+  m_ApplyRootMotion: 0
+  m_AnimatePhysics: 0
+  m_HasTransformHierarchy: 1
 --- !u!1 &146827593
 GameObject:
   m_ObjectHideFlags: 0
@@ -1617,7 +1632,6 @@ MonoBehaviour:
   jumpForce: 50
   moveVMax: 10
   groundCheck: {fileID: 1172608564}
-  anim: {fileID: 913679495}
 --- !u!95 &913679495
 Animator:
   serializedVersion: 2

@@ -7,12 +7,13 @@ public class Hero : MonoBehaviour {
 	public float jumpForce = 0.1f;
 	public float moveVMax = 1;
 	public Transform groundCheck;
-	public Animator anim;
+	private Animator anim;
 
 	private GameObject gameUI;
 	
 	void Start () {
 		gameUI = GameObject.Find("/GameUI");
+		anim = GetComponent<Animator>();
 	}
 
 	void FixedUpdate() {
