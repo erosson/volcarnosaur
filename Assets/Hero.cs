@@ -7,10 +7,13 @@ public class Hero : MonoBehaviour {
 	public float jumpForce = 0.1f;
 	public float moveVMax = 1;
 	public Transform groundCheck;
+	public Animator anim;
 
 	void Update () {
 		var movement = Input.GetAxis("Horizontal");
-		rigidbody2D.AddForce(Vector2.right * movement * moveForce);
+		var force = movement * moveForce;
+		anim.SetFloat("Acceleration", force);
+		rigidbody2D.AddForce(Vector2.right * force);
 		rigidbody2D.velocity = new Vector2(Mathf.Clamp(rigidbody2D.velocity.x, -moveVMax, moveVMax), rigidbody2D.velocity.y);
 
 		var jump = Input.GetAxis("Vertical");
