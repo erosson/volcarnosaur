@@ -115,8 +115,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnDelaySeconds: 1
-  spawnDelayVariance: .100000001
-  maxEnemies: 10
+  spawnDelayVariance: .5
+  maxEnemies: 6
 --- !u!58 &15706826
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -720,8 +720,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnDelaySeconds: 1
-  spawnDelayVariance: .100000001
-  maxEnemies: 10
+  spawnDelayVariance: .5
+  maxEnemies: 6
 --- !u!4 &421188101
 Transform:
   m_ObjectHideFlags: 0
@@ -785,8 +785,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnDelaySeconds: 1
-  spawnDelayVariance: .100000001
-  maxEnemies: 10
+  spawnDelayVariance: .5
+  maxEnemies: 6
 --- !u!1 &580479170
 GameObject:
   m_ObjectHideFlags: 0
@@ -838,8 +838,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnDelaySeconds: 1
-  spawnDelayVariance: .100000001
-  maxEnemies: 10
+  spawnDelayVariance: .5
+  maxEnemies: 6
 --- !u!1 &584070694
 GameObject:
   m_ObjectHideFlags: 0
@@ -929,8 +929,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnDelaySeconds: 1
-  spawnDelayVariance: .100000001
-  maxEnemies: 10
+  spawnDelayVariance: .5
+  maxEnemies: 6
 --- !u!1 &726800375
 GameObject:
   m_ObjectHideFlags: 0
@@ -982,8 +982,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnDelaySeconds: 1
-  spawnDelayVariance: .100000001
-  maxEnemies: 10
+  spawnDelayVariance: .5
+  maxEnemies: 6
 --- !u!1 &771619119
 GameObject:
   m_ObjectHideFlags: 0
@@ -1636,8 +1636,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnDelaySeconds: 1
-  spawnDelayVariance: .100000001
-  maxEnemies: 10
+  spawnDelayVariance: .5
+  maxEnemies: 6
 --- !u!1 &1352103860
 GameObject:
   m_ObjectHideFlags: 0
@@ -2020,8 +2020,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnDelaySeconds: 1
-  spawnDelayVariance: .100000001
-  maxEnemies: 10
+  spawnDelayVariance: .5
+  maxEnemies: 6
 --- !u!1 &1709866386
 GameObject:
   m_ObjectHideFlags: 0
