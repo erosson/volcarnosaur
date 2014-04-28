@@ -10,7 +10,7 @@ public class MainMenu : MonoBehaviour {
 		GUI.backgroundColor = Color.clear;
 		GUILayout.Box(logo);
 		GUI.backgroundColor = Color.white;
-		GUILayout.Box("The volcano demands blood! Push other dinosaurs into its fiery maw to delay the eruption.\n\n" + 
+		GUILayout.Box("The volcano demands blood! Push other dinosaurs under its lava to delay the eruption.\n\n" + 
 		              "You're the dinosaur with the jetpack. Use the arrow keys to walk and fly.");
 		if (GUILayout.Button ("Play")) {
 			//AudioSource.PlayClipAtPoint(selectSfx, transform.position);
