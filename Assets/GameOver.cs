@@ -9,6 +9,8 @@ public class GameOver : MonoBehaviour {
 	};
 
 	public Texture2D logo;
+	public AudioClip selectSfx;
+	public AudioClip playerDies;
 	private GameOverParams args;
 	private string causeText;
 
@@ -23,6 +25,7 @@ public class GameOver : MonoBehaviour {
 		DebugUtil.Assert(args != null);
 		Destroy(obj);
 		causeText = causeTexts[args.cause];
+		AudioSource.PlayClipAtPoint(playerDies, transform.position);
 	}
 
 	void OnGUI() {
@@ -32,6 +35,7 @@ public class GameOver : MonoBehaviour {
 		GUI.backgroundColor = Color.white;
 		GUILayout.Box(string.Format ("{0}\nSurvived {1} seconds\nKilled {2} enemies", causeText, args.elapsedSeconds, args.enemiesKilled));
 		if (GUILayout.Button ("Return to Main Menu")) {
+			//AudioSource.PlayClipAtPoint(selectSfx, transform.position);
 			Application.LoadLevel("MainMenu");
 		}
 		GUILayout.EndArea();

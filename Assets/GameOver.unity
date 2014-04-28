@@ -130,6 +130,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   logo: {fileID: 2800000, guid: b0ec6550ee1535d46b2a5eb8058d0e9d, type: 3}
+  selectSfx: {fileID: 8300000, guid: fdd9d2a608ad36c4ab49b318f1c0d0a7, type: 3}
+  playerDies: {fileID: 8300000, guid: e6613aa0b0b18db42ae7c7e70c8b1243, type: 3}
 --- !u!4 &250321714
 Transform:
   m_ObjectHideFlags: 0
@@ -359,3 +361,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96870220fd5b42943a2eae983e734d97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cause: 0

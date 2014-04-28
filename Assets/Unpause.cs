@@ -2,6 +2,7 @@
 using System.Collections;
 
 public class Unpause : MonoBehaviour {
+	public AudioClip selectSfx;
 	private GameOverParams gameOverParams;
 	private Timer timer;
 	private Pause pause;
@@ -16,6 +17,7 @@ public class Unpause : MonoBehaviour {
 	
 	void Update() {
 		if (Input.GetKeyDown(KeyCode.Escape)) {
+			AudioSource.PlayClipAtPoint(selectSfx, transform.position);
 			pause.gameObject.SetActive(true);
 		}
 	}
