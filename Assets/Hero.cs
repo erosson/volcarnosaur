@@ -22,19 +22,23 @@ public class Hero : MonoBehaviour {
 		var force = movement * moveForce;
 		anim.SetFloat("Acceleration", force);
 		rigidbody2D.AddForce(Vector2.right * force);
-		rigidbody2D.velocity = new Vector2(Mathf.Clamp(rigidbody2D.velocity.x, -moveVMax, moveVMax), rigidbody2D.velocity.y);
 
 		var jump = Input.GetAxis("Vertical");
+		var jumpForce = jump * moveForce / 2;
+		//anim.SetFloat("Jump", force);
+		rigidbody2D.AddForce(Vector2.up * jumpForce);
+		rigidbody2D.velocity = new Vector2(Mathf.Clamp(rigidbody2D.velocity.x, -moveVMax, moveVMax), Mathf.Clamp(rigidbody2D.velocity.y, -moveVMax * 3, moveVMax * 3));
 		// TODO grounded detection; no flying
-		if (jump > 0) {
+		// nope. out of time!
+		//if (jump > 0) {
 			//var cast = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("ground"));
 			//if (cast.collider) {
-				rigidbody2D.AddForce(Vector2.up * jumpForce);
+		//		rigidbody2D.AddForce(Vector2.up * jumpForce);
             //}
 			//else {
 			//	Debug.Log ("grounded-check prevents jump");
 			//}
-        }
+        //}
 	}
 
 	void OnTouchLava() {
