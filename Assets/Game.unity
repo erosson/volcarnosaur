@@ -172,6 +172,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveForce: 2
   moveVMax: 2
+  deaths: []
 --- !u!61 &34328075
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -253,6 +254,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveForce: 2
   moveVMax: 2
+  deaths: []
 --- !u!61 &131430576
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -427,6 +429,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveForce: 20
   moveVMax: 10
+  deaths:
+  - {fileID: 8300000, guid: 8243b00ee29f90d42b573f21d73151f0, type: 3}
+  - {fileID: 8300000, guid: 5f32a730a328f3d47b8b96d373443489, type: 3}
+  - {fileID: 8300000, guid: a824ef15f1b8f604b8ee217d1147ea24, type: 3}
 --- !u!50 &140144846
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -797,6 +803,91 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_Sprite: {fileID: 21300000, guid: 0f41811c6472f374b9fc6d769797cb7c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &370606875
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 370606877}
+  - 82: {fileID: 370606876}
+  m_Layer: 0
+  m_Name: One shot audio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &370606876
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 370606875}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: fdd9d2a608ad36c4ab49b318f1c0d0a7, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+--- !u!4 &370606877
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 370606875}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: .334003448, y: -.331042767, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
 --- !u!1 &390886783
 GameObject:
   m_ObjectHideFlags: 0
@@ -809,7 +900,7 @@ GameObject:
   - 60: {fileID: 390886784}
   m_Layer: 13
   m_Name: Volcano
-  m_TagString: Untagged
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1132,7 +1223,7 @@ GameObject:
   - 61: {fileID: 584070696}
   m_Layer: 0
   m_Name: top
-  m_TagString: Untagged
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1540,6 +1631,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveForce: 2
   moveVMax: 2
+  deaths: []
 --- !u!61 &808503974
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1753,6 +1845,8 @@ MonoBehaviour:
   jumpForce: 50
   moveVMax: 10
   groundCheck: {fileID: 1172608564}
+  collisions:
+  - {fileID: 8300000, guid: 29ee8688696724b468785ba1e8e67c5c, type: 3}
 --- !u!95 &913679495
 Animator:
   serializedVersion: 2
@@ -1777,11 +1871,11 @@ AudioSource:
   serializedVersion: 3
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: .224000007
   m_Pitch: 1
   Loop: 0
   Mute: 0
-  Priority: 128
+  Priority: 71
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -1862,7 +1956,7 @@ GameObject:
   - 61: {fileID: 993173439}
   m_Layer: 0
   m_Name: left
-  m_TagString: Untagged
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2713,6 +2807,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveForce: 2
   moveVMax: 2
+  deaths: []
 --- !u!61 &1556610195
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3092,7 +3187,7 @@ GameObject:
   - 61: {fileID: 1905135273}
   m_Layer: 0
   m_Name: right
-  m_TagString: Untagged
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3214,7 +3309,7 @@ GameObject:
   - 61: {fileID: 1932209208}
   m_Layer: 13
   m_Name: grass
-  m_TagString: Untagged
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class Hero : MonoBehaviour {
 	public float collisionForce = 5;

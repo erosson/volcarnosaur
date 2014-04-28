@@ -8,6 +8,7 @@ public class Foe : MonoBehaviour {
 	private GameObject gameUI;
 	private int walking = 0;
 	private Animator anim;
+	public AudioClip[] deaths;
 
 	void Start () {
 		gameUI = GameObject.Find("/GameUI");
@@ -16,6 +17,7 @@ public class Foe : MonoBehaviour {
 	}
 	
 	void OnTouchLava() {
+		AudioSource.PlayClipAtPoint(deaths[Random.Range (0, deaths.Length)], transform.position);
 		Destroy(gameObject);
 		gameUI.BroadcastMessage("OnEnemyKilled", this);
     }
